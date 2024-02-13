@@ -23,7 +23,8 @@ public class CarBookingServiceTest {
     @DisplayName("Can add a car booking")
     void canAddACarBooking() {
         Car car = carService.getAllCars().get(5);
-        User user = new User(UUID.randomUUID(), "Leila");
+        UUID id = UUID.randomUUID();
+        User user = new User(id, "Leila", "leila@gmail.com");
 
         CarBooking carBooking = new CarBooking(1, car, user);
 
